@@ -1,6 +1,5 @@
 /********************************
 <<<<<<< HEAD
-<<<<<<< HEAD
  *
  * ArraySort.c
  *
@@ -13,23 +12,18 @@
  * if so, you will have to correct it
  *
 =======
-=======
->>>>>>> b488a8972770cfa76d5fb9c7d62cbdec2c37be00
- * 
+ *
  * ArraySort.c
- * 
+ *
  * Created by Jean-Philippe Legault
- * 
+ *
  * Your task is to implement in place sorting using the two available functions
  * swapAdjacent, and compareAdjacent.
- * 
+ *
  * Some bug might have been introduced... you will have to find out if there are any!
  * if so, you will have to correct it
- * 
-<<<<<<< HEAD
+ *
 >>>>>>> 76a3425b61af7ebb2ff6f6c0030ac54d900cef60
-=======
->>>>>>> b488a8972770cfa76d5fb9c7d62cbdec2c37be00
  ********************************/
 #include <stdio.h>
 #include <stdlib.h>
@@ -37,44 +31,24 @@
 
 void printArray(int *array, int size)
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    int i;
-    for(i=0; i<size; i++)
-=======
-    for(int i=0; i<size; i++)
->>>>>>> 76a3425b61af7ebb2ff6f6c0030ac54d900cef60
-=======
-    for(int i=0; i<size; i++)
->>>>>>> b488a8972770cfa76d5fb9c7d62cbdec2c37be00
-    {
-        if(i != 0)
-        {
-            printf(", ");
-        }
-        printf("%d", array[i]);
-    }
-    printf("\n");
+  int i;
+  for(i=0; i<size; i++)
+      {
+          if(i != 0)
+          {
+              printf(", ");
+          }
+          printf("%d", array[i]);
+      }
+      printf("\n");
 }
 
 void swapAdjacent(int *a, int index)
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 {
-    int temp = *(a+index);
-    *(a+index) = *(a + index+1);
-    *(a+index+1) = temp;
-=======
-=======
->>>>>>> b488a8972770cfa76d5fb9c7d62cbdec2c37be00
-{    
-    int *temp = a + index;
-    *(a + index) = *(a + index + 1);    
-    *(a + index + 1) = *temp;
-<<<<<<< HEAD
->>>>>>> 76a3425b61af7ebb2ff6f6c0030ac54d900cef60
-=======
->>>>>>> b488a8972770cfa76d5fb9c7d62cbdec2c37be00
+    int temp = *(a + index);
+    *(a + index) = *(a + index + 1);
+    *(a + index + 1) = temp;
 }
 
 int compareAdjacent(int *a, int index)
@@ -86,8 +60,7 @@ int compareAdjacent(int *a, int index)
  * TODO: implement in place sorting on an array
  * by using the two functions swapAdjacent and compareAdjacent
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 void inPlaceSort(int *a, int index)
 {
   int i, j;
@@ -98,27 +71,12 @@ void inPlaceSort(int *a, int index)
 
         swapAdjacent(a, j);
       }
-=======
-void inPlaceSort(/* your input parameter */)
-{
-
->>>>>>> 76a3425b61af7ebb2ff6f6c0030ac54d900cef60
-=======
-void inPlaceSort(/* your input parameter */)
-{
-
->>>>>>> b488a8972770cfa76d5fb9c7d62cbdec2c37be00
 }
 
 int main(void)
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     int x;
-=======
->>>>>>> 76a3425b61af7ebb2ff6f6c0030ac54d900cef60
-=======
->>>>>>> b488a8972770cfa76d5fb9c7d62cbdec2c37be00
 
     int array_size = 0;
     printf("Enter the array size (>0) and the numbers to fill the array with: ");
@@ -135,8 +93,7 @@ int main(void)
 
     int a[array_size];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
     /**********************
      * TODO finish parsing the user input to fill the array
@@ -148,32 +105,9 @@ int main(void)
 
          scanf("%d", &a[x]);
      }
-      printArray(a, array_size);
+    printArray(a, array_size);
     inPlaceSort(a,array_size);
     printArray(a, array_size);
 
     return 0;
 }
-=======
-=======
->>>>>>> b488a8972770cfa76d5fb9c7d62cbdec2c37be00
-    /**********************
-     * TODO finish parsing the user input to fill the array
-     * 
-     * it should parse user input with scanf to fill the array with values
-     **********************/
-
-    printf("=== Array before Sorting = ");
-    printArray(a, array_size);
-
-    inPlaceSort(/* your input parameter */);
-
-    printf("=== Array after Sorting = ");
-    printArray(a, array_size);
-
-<<<<<<< HEAD
-}
->>>>>>> 76a3425b61af7ebb2ff6f6c0030ac54d900cef60
-=======
-}
->>>>>>> b488a8972770cfa76d5fb9c7d62cbdec2c37be00
